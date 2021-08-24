@@ -6,7 +6,9 @@ import "google/protobuf/descriptor.proto";
 option go_package = "github.com/cosmos/cosmos-proto";
 
 extend google.protobuf.MessageOptions {
-    string implements_interface = 93001;
+    string interface_type = 93001;
+
+    string implements_interface = 93002;
 }
 
 extend google.protobuf.FieldOptions {
