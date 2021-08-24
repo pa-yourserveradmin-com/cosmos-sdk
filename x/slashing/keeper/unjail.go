@@ -49,7 +49,7 @@ func (k Keeper) Unjail(ctx sdk.Context, validatorAddr sdk.ValAddress) error {
 	if found {
 		// cannot be unjailed if tombstoned
 		if info.Tombstoned {
-			return types.ErrValidatorJailed
+			return types.ErrValidatorTombstoned
 		}
 
 		// cannot be unjailed until out of jail
